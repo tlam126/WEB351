@@ -1,0 +1,258 @@
+body {
+    background-color: #333;
+}
+
+div.container {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #eee;
+}
+
+header.masthead { padding: 20px; background-color: teal; }
+main { padding: 20px; background-color: white; }
+footer.closing { padding: 20px; background-color: teal; }
+
+
+/*-------------------------------------
+| Mobile First, Responsive :: c2 + tab
+-------------------------------------*/
+/* Mobile -------------------------------*/
+div.container {
+    width: 70%;
+    min-width: 320px;
+    border: solid 20px goldenrod;
+}
+
+img.timbuktu {
+    border: 10px solid red;
+    max-width: 90%;
+}
+#mainmenu {
+    text-align: right;
+}
+
+#mainmenu .glyphicon-menu-hamburger {
+    color: red;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#mainmenu nav.primary { display: none; }
+#mainmenu.timbuktu nav.primary { display: block; }
+
+
+#mainmenu nav.primary a {
+    /* display: inline; */
+    /* display: inline-block; */
+    display: block;
+    background-color: #084545;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 3px;
+
+    text-align: center;
+
+}
+#mainmenu nav.primary a.current { background-color: #3d140a; }
+#mainmenu nav.primary a:hover { background-color: #042b2b; }
+
+article {
+    background-color: #eeeeee;
+    padding: 20px;
+}
+aside {
+    background-color: #999999;
+    padding: 20px;
+}
+
+
+
+
+/* Notepad -------------------------------*/
+@media screen and (min-width: 500px) {
+    div.container {
+        border: solid 20px purple;
+    }
+    #mainmenu .glyphicon-menu-hamburger { display: none; }
+
+    /* h1, div.who, h3, div.what { color: red; }
+
+    h1         { color: red; }
+    div.who     { color: red; }
+    h3         { color: red; }
+    div.what     { color: red; } */
+
+    #mainmenu nav.primary,  #mainmenu.timbuktu nav.primary {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    #mainmenu nav.primary a {
+        width: 49%;
+    }
+}
+
+/* Desktop -------------------------------*/
+@media screen and (min-width: 700px) {
+    #mainmenu nav.primary a {
+        width: 19%;
+        font-size: 12px;
+    }
+    div.container {
+        border: solid 20px maroon;
+    }
+
+    main.cols2 {
+        display: flex;
+    }
+    main.cols2 article { width: 65%; }
+    main.cols2 aside { width: 35%; }
+}
+
+
+/*-------------------------------------
+| Tabs
+-------------------------------------*/
+.tabbed {}
+.tabbed nav.toc {
+    margin-bottom: 15px;
+}
+.tabbed nav.toc a {
+    text-decoration: none;
+    font-size: 20px;
+    color: maroon;
+    background-color: teal;
+    display: inline-block;
+    width: 50px;
+    line-height: 30px;
+    text-align: center;
+}
+.tabbed section {
+    background-color: teal;
+    min-height: 300px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.tabbed section.active {}
+
+@media screen and (min-width: 700px) {
+    .tabbed nav.toc { margin-bottom: 0px; }
+    .tabbed nav.toc a {
+        border-radius: 5px 5px 0px 0px;
+        width: 90px;
+        line-height: 40px;
+    }
+    .tabbed nav.toc a { background-color: #063636; color: white; }
+    .tabbed nav.toc a.active { background-color: teal; }
+    .tabbed section { display: none; }
+    .tabbed section.active { display: block; }
+}
+
+/*-------------------------------------
+| Slideshows Faded
+-------------------------------------*/
+div.faded {
+    width: 100%;
+    height: 360px;
+    border: solid 10px teal;
+    margin: 25px auto;
+
+    /* padding: 20px; */
+
+    /* box-sizing: content-box; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+div.faded img {
+    width: 100%;
+    position: absolute;
+    left: 0px; top: 0px;
+}
+
+
+
+/*-------------------------------------
+| Slideshows Sliding
+-------------------------------------*/
+div.sliding {
+    width: 600px;
+    height: 310px;
+    border: solid 10px purple;
+    margin: 25px auto;
+
+    /* padding: 20px; */
+
+    /* box-sizing: content-box; */
+    box-sizing: border-box;
+    position: relative;
+
+    overflow: hidden;
+}
+
+div.sliding img {
+    width: 100%;
+    position: absolute;
+    left: 0px; top: 0px;
+}
+
+/*-------------------------------------
+| Form
+-------------------------------------*/
+form {
+    width: 100%;
+    margin: 50px auto;
+    background-color: #aaa;
+    padding: 15px 15px 50px;
+}
+form label { margin-top: 10px; }
+form input {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+form textarea {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+form input.missing, form textarea.missing { background-color: orange; }
+
+form button {
+    margin: 20px 0px;
+    background-color: teal;
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.feedback {
+    background-color: teal;
+    padding: 40px;
+
+    display: none;
+}
+.feedback li {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
